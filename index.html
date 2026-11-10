@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CO44ECT</title>
+<title>Play '4'</title>
 <script>window.FBready=new Promise(r=>{window._fbr=r});</script>
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#e9e5d8;--bg2:#cfc8b4;--fg:#1d2433;--card:#fff;--line:#d0cbb9}
@@ -16,10 +16,12 @@ h1{margin:2px 0 14px;line-height:1;font-family:"Arial Black","Segoe UI Black",Im
 h1 span{display:inline-block;background:linear-gradient(180deg,var(--l) 0%,var(--c) 52%,var(--d) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
   filter:drop-shadow(1px 1px 0 var(--d)) drop-shadow(1px 1px 0 var(--d)) drop-shadow(1px 1px 0 var(--d)) drop-shadow(1px 1px 0 var(--d)) drop-shadow(1px 1px 0 var(--d)) drop-shadow(0 9px 6px rgba(0,0,0,.4));
   animation:bob 2.8s ease-in-out infinite;animation-delay:calc(var(--i)*.12s)}
-h1 .r{--l:#ffa59d;--c:#ee2b21;--d:#8a0d0d}
-h1 .y{--l:#fff9b0;--c:#ffd21f;--d:#a06c00}
-h1 .b{--l:#9cc8ff;--c:#2f7cf0;--d:#0c3584;font-size:1.45em;line-height:.8;margin:0 .02em;transform:rotate(-5deg)}
-h1 .b+.b{transform:rotate(5deg)}
+h1 .p{--l:#9cc8ff;--c:#2f7cf0;--d:#0c3584}
+h1 .l{--l:#9cc8ff;--c:#2f7cf0;--d:#0c3584}
+h1 .a{--l:#9cc8ff;--c:#2f7cf0;--d:#0c3584}
+h1 .y{--l:#9cc8ff;--c:#2f7cf0;--d:#0c3584}
+h1 .n{--l:#ffa59d;--c:#ee2b21;--d:#8a0d0d;font-size:1.45em;line-height:.8;margin:0 .02em;transform:rotate(-5deg)}
+h1 .n+.n{transform:rotate(5deg)}
 @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -6px}}
 .pulse{animation:pj 1s ease-in-out infinite;background:#1fae5b!important;color:#fff!important;border-color:#1fae5b!important;font-weight:700}
 @keyframes pj{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(31,174,91,.65)}50%{transform:scale(1.12);box-shadow:0 0 0 12px rgba(31,174,91,0)}}
@@ -84,7 +86,7 @@ input{font:inherit;font-size:14px;padding:8px 10px;width:110px;border-radius:10p
 <canvas id="bg"></canvas>
 <div id="toast" role="status" aria-live="polite"></div>
 <div id="inv" style="display:none"><div class="invc"><div class="invt">You’re invited to play!</div><div class="invs">Game code<b id="invcode"></b></div><input id="nm2" maxlength="12" placeholder="Your name" autocomplete="off"><button id="jb">JOIN GAME</button><br><button id="jx">Not now</button></div></div>
-<h1 aria-label="CO44ECT"><span class="r" style="--i:0" aria-hidden="true">C</span><span class="y" style="--i:1" aria-hidden="true">O</span><span class="b" style="--i:2" aria-hidden="true">4</span><span class="b" style="--i:3" aria-hidden="true">4</span><span class="r" style="--i:4" aria-hidden="true">E</span><span class="y" style="--i:5" aria-hidden="true">C</span><span class="r" style="--i:6" aria-hidden="true">T</span></h1>
+<h1 aria-label="Play '4'"><span class="p" style="--i:0" aria-hidden="true">P</span><span class="l" style="--i:1" aria-hidden="true">l</span><span class="a" style="--i:2" aria-hidden="true">a</span><span class="y" style="--i:3" aria-hidden="true">y</span> <span class="n" style="--i:4" aria-hidden="true">‘</span><span class="n" style="--i:5" aria-hidden="true">4</span><span class="n" style="--i:6" aria-hidden="true">’</span></h1>
 <div class="bar">
   <button id="m2">2 Players</button>
   <button id="mb" class="on">vs Bot</button>
@@ -492,7 +494,7 @@ $('jn').onclick=()=>{
   if(c.length===5)enter(c,false);else netMsg('Enter the 5-character code');
 };
 $('cp').onclick=async()=>{
-  const msg='Join my CO44ECT game! Code: '+roomCode+'\nhttps://lst-2k.github.io/connect4/?code='+roomCode;
+  const msg='Join my Play \'4\' game! Code: '+roomCode+'\nhttps://lst-2k.github.io/connect4/?code='+roomCode;
   try{if(navigator.share)await navigator.share({text:msg});else await navigator.clipboard.writeText(msg);$('cp').textContent='Copied!';setTimeout(()=>$('cp').textContent='Share invite',1500)}catch(e){}
 };
 /* ---- player names ---- */
